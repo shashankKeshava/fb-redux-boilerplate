@@ -1,9 +1,6 @@
-// const initialState= initialState
-const Reducer = (prevState = {}, action) => {
-    switch (action.type) {
-        default:
-            return prevState;
-    }
-};
+import {combineReducers} from 'redux';
+import app from '../duc';
 
-export default Reducer;
+export default combineReducers({
+    [app.store]: app.reducer
+})

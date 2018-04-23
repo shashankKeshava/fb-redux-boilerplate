@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import AppDuc from '../../duc'
 import './index.scss';
 
 class App extends Component {
@@ -24,7 +25,7 @@ const mapStateToProps = state => {
     return state;
 };
 
-const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({AppDuc.creators.fetchData}, dispatch);
 
 const appVisibility = connect(mapStateToProps, mapDispatchToProps);
 export default appVisibility;
